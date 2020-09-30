@@ -1,0 +1,39 @@
+﻿@model TP02SWII.Models.BL
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+
+<h2>Deletar</h2>
+
+<h3>Tem certeza que deseja deletar isto?</h3>
+<div>
+    <h4>BL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Consignee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Consignee)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ship)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BLId" />
+        <input type="submit" value="Apagar" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>
